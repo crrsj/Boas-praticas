@@ -21,13 +21,7 @@ public class Pedido {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Integer qtd;
-    @NotNull(message = "O preço não pode ser nulo")
-    @Positive(message = "O preço deve ser maior que zero")
-    @Digits(integer = 8, fraction = 2, message = "O preço deve ter no máximo 8 dígitos e 2 casas decimais")
     private BigDecimal subtotal;
-    @NotNull(message = "O preço não pode ser nulo")
-    @Positive(message = "O preço deve ser maior que zero")
-    @Digits(integer = 8, fraction = 2, message = "O preço deve ter no máximo 8 dígitos e 2 casas decimais")
     private BigDecimal total;
     private boolean ativo;
     @ManyToOne

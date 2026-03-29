@@ -25,6 +25,7 @@ public class ProdutoDTO {
     @Positive(message = "O preço deve ser maior que zero")
     @Digits(integer = 8, fraction = 2, message = "O preço deve ter no máximo 8 dígitos e 2 casas decimais")
     private BigDecimal preco;
+    @NotBlank(message = "não pode estar em branco!")
     private String img;
     private List<Pedido> pedidos = new ArrayList<>();
 
