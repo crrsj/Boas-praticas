@@ -15,7 +15,7 @@ public class PedidoDTO {
 
     private Long id;
     @NotNull(message = "A quantidade não pode ser nula")
-    @Positive(message = "Aquantidade deve ser maior que zero")
+    @Positive(message = "A quantidade deve ser maior que zero")
     private Integer qtd;
     @NotNull(message = "O preço não pode ser nulo")
     @Positive(message = "O preço deve ser maior que zero")
