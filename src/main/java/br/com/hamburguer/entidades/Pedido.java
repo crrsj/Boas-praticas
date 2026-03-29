@@ -29,9 +29,11 @@ public class Pedido {
     private Produto produto;
 
     public void calcularTotais() {
-        if (this.produto != null && this.qtd != null) {
-            BigDecimal preco = BigDecimal.valueOf(this.produto.getPreco());
-            this.subtotal = preco.multiply(BigDecimal.valueOf(this.qtd));
+        this.subtotal = BigDecimal.ZERO;
+        this.total = BigDecimal.ZERO;
+        if (this.produto != null && this.produto.getPreco() != null && this.qtd != null) {
+            BigDecimal precoUnitario = BigDecimal.valueOf(this.produto.getPreco());
+            this.subtotal = precoUnitario.multiply(BigDecimal.valueOf(this.qtd));
             this.total = this.subtotal;
         }
     }
